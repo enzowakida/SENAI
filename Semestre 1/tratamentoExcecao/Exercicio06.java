@@ -1,0 +1,34 @@
+package tratamentoExcecao;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exercicio06 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int numero = 0;
+
+        try {
+            System.out.println("Escolha um número entre 1 a 3: ");
+            numero = ler.nextInt();
+        } catch (InputMismatchException erro) {
+            System.out.println("Valor incorreto! Digite um valor inteiro.");
+        }
+
+        switch (numero) {
+            case 1:
+                System.out.println("O número escolhido foi: 1.");
+                break;
+            case 2:
+                System.out.println("O número escolhido foi: 2.");
+                break;
+            case 3:
+                System.out.println("O número escolhido foi: 3.");
+                break;
+
+            default:
+                System.out.println("O número escolhido é inválido! Digite um número entre 1 a 3.");
+        }
+        ler.close();
+    }
+}
